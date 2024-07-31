@@ -59,3 +59,41 @@
 {
     background-image: url(../../assets/images/icon-minus.svg);
 }
+@media screen and (max-width: 1200px)
+{
+    .main-faq
+    {
+        width: 60%;
+    }
+}
+@media screen and (max-width: 900px)
+{
+    .main-faq
+    {
+        width: 80%;
+    }
+}
+@media screen and (max-width: 700px)
+{
+    .main-faq
+    {
+        width: 90%;
+    }
+}
+@media screen and (max-width: 400px)
+{
+    .main-faq
+    {
+        width: 94%;
+    }
+    body
+    {
+        background-image: url(../../assets/images/background-pattern-mobile.svg);
+        overflow-y: scroll;
+        background-size: auto;
+    }
+    ::-webkit-scrollbar
+    {
+        width: 10px;
+    }
+}
