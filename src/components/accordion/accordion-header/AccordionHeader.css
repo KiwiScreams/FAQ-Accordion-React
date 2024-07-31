@@ -1,0 +1,13 @@
+.main-faq .faq-header
+{
+    margin-bottom: 32px;
+}
+.main-faq h1
+{
+    font-weight: var(--font-weight-700);
+    font-size: 56px;
+    color: var(--purple-clr);
+    width: fit-content;
+    gap: 24px;
+    font-family: 'sans-bold';
+}

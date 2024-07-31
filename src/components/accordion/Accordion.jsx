@@ -1,8 +1,8 @@
-import iconStar from "../../assets/images/icon-star.svg";
 import iconPlus from "../../assets/images/icon-plus.svg";
 import iconMinus from "../../assets/images/icon-minus.svg";
 import "./Accordion.css"
 import { useState } from "react";
+import AccordionHeader from "./accordion-header/AccordionHeader";
 function Accordion() {
     const [activePanel, setActivePanel] = useState(null);
     const [panels, setPanels] = useState([
@@ -34,9 +34,7 @@ function Accordion() {
     return (
         <>
             <section className="main-faq">
-                <div className="faq-header">
-                    <h1 className="flex"><img src={iconStar} alt="" />FAQs</h1>
-                </div>
+                <AccordionHeader />
                 <div className="faq-body">
                     {panels.map((panel) => (
                         <div key={panel.id} className="faq" onClick={() => handleToggle(panel.id)}>
