@@ -13,12 +13,12 @@
 @font-face
 {
     font-family: 'sans-bold';
-    src: url(../assets/fonts/static/WorkSans-Bold.ttf);
+    src: url(../src/assets/fonts/static/WorkSans-Bold.ttf);
 }
 @font-face
 {
     font-family: 'sans-reg';
-    src: url(../assets/fonts/static/WorkSans-Regular.ttf);
+    src: url(../src/assets/fonts/static/WorkSans-Regular.ttf);
 }
 :root
 {
@@ -39,4 +39,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+body
+{
+    width: 100vw;
+    overflow: hidden;
+    height: 100vh;
+    background-image: url(../src/assets/images/background-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: var(--gray-clr);
 }
