@@ -1,6 +1,7 @@
 import iconStar from "../../assets/images/icon-star.svg";
 import iconPlus from "../../assets/images/icon-plus.svg";
 import iconMinus from "../../assets/images/icon-minus.svg";
+import "./Accordion.css"
 import { useState } from "react";
 function Accordion() {
     const [activePanel, setActivePanel] = useState(null);
@@ -47,13 +48,10 @@ function Accordion() {
                     )}
                 </div> */}
                     {panels.map((panel) => (
-                        <div key={panel.id} className={` ${activePanel === panel.id ? 'accordion-active' : ''}`} onClick={() => handleToggle(panel.id)}>
-                            <button className="accordion flex">What is Frontend Mentor, and how will it help me?<img
-                                src={iconPlus} alt="" className={activePanel === panel.id ? "active" : ""}/>
-
-                            </button>
+                        <div key={panel.id} className={`rame ${activePanel === panel.id ? 'accordion-active' : ''}`} onClick={() => handleToggle(panel.id)}>
+                            <button className="accordion flex">What is Frontend Mentor, and how will it help me?<span className={activePanel === panel.id ? "active" : ""}></span></button>
                             {activePanel === panel.id && (
-                                <div className="accordion-content">
+                                <div className="panel">
                                     <p>{panel.content}</p>
                                 </div>
                             )}
