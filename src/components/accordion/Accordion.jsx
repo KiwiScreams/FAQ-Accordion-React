@@ -38,18 +38,18 @@ function Accordion() {
                     <h1 className="flex"><img src={iconStar} alt="" />FAQs</h1>
                 </div>
                 <div className="faq-body">
-                    {/* {panels.map((panel) => (
-                    <button class="accordion flex">What is Frontend Mentor, and how will it help me?<img
-                        src={iconPlus} alt="" /></button>
-                    <div class="panel">
-                        <p>Frontend Mentor offers realistic coding challenges to help developers improve their frontend coding skills
-                            with projects in HTML, CSS, and JavaScript. It's suitable for all levels and ideal for portfolio building.</p>
-                    </div>
-                    )}
-                </div> */}
                     {panels.map((panel) => (
-                        <div key={panel.id} className={`rame ${activePanel === panel.id ? 'accordion-active' : ''}`} onClick={() => handleToggle(panel.id)}>
-                            <button className="accordion flex">What is Frontend Mentor, and how will it help me?<span className={activePanel === panel.id ? "active" : ""}></span></button>
+                        <div key={panel.id} className="faq" onClick={() => handleToggle(panel.id)}>
+                            <button className="accordion flex">
+                                {panel.title}
+                                <span className={activePanel === panel.id ? "active" : ""}>
+                                    {activePanel === panel.id ? (
+                                        <img src={iconMinus} alt="" />
+                                    ) : (
+                                        <img src={iconPlus} alt="" />
+                                    )}
+                                </span>
+                            </button>
                             {activePanel === panel.id && (
                                 <div className="panel">
                                     <p>{panel.content}</p>
