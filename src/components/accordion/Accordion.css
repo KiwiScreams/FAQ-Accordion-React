@@ -24,3 +24,28 @@
     gap: 24px;
     font-family: 'sans-bold';
 }
+.main-faq .accordion
+{
+    width: 100%;
+    background-color: transparent;
+    font-size: 18px;
+    font-weight: var(--font-weight-600);
+    margin-bottom: 28px;
+    padding: 24px 0;
+    border-top: 1px solid var(--gray-clr);
+    border-bottom: 1px solid var(--gray-clr);
+}
+.main-faq .accordion:hover
+{
+    color: var(--light-purple-clr);
+}
+.main-faq .panel
+{
+    display: none;
+}
+.main-faq .panel p
+{
+    color: var(--pale-purple-clr);
+    font-weight: var(--font-weight-400);
+    font-size: 16px;
+}
